@@ -21,6 +21,16 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   </head>
   <body>
     <svg
@@ -149,7 +159,53 @@
     </header>
 
     <main id="main">
-      <section
+
+
+
+
+<section class="hero-banner">
+
+    <!-- Banner Image -->
+    <img src="assets/imgs/commission-banner.jpg"
+         alt="Blue and Green Landscape"
+         class="hero-bg">
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+
+        <!-- Breadcrumb -->
+        <div class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Blue & Green commissions</span>
+        </div>
+
+        <!-- Heading Content -->
+        <div class="hero-text">
+
+            <span class="hero-label">BLUE & GREEN COMMISSIONS</span>
+
+            <h1>
+              Flagship projects <br />executed.
+            </h1>
+
+            <p>
+              Work contracted to and delivered by Blue & Green Infrastructure
+            since its establishment in December 2025.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+      <!-- <section
         class="page-banner page-banner-blueprint"
         aria-labelledby="page-title"
       >
@@ -160,14 +216,14 @@
           </nav>
           <span class="eyebrow">BLUE & GREEN COMMISSIONS</span>
           <h1 id="page-title">
-            Flagship projects <br />executed as Blue & Green.
+            Flagship projects <br />executed.
           </h1>
           <p>
             Work contracted to and delivered by Blue & Green Infrastructure
             since its establishment in December 2025.
           </p>
         </div>
-      </section>
+      </section> -->
 
       <section
         class="commissions section-space"
@@ -176,7 +232,7 @@
       >
         <div class="container">
           <article class="commission reveal" aria-labelledby="c-tata">
-            <figure class="drawing">
+            <!-- <figure class="drawing">
               <div class="memorial-architecture-image">
     <img
         src="assets/Ratan Tata Water Curtain Hydraulic Diagram.png"
@@ -188,7 +244,97 @@
                 <span>Rain curtain & bubbler array</span
                 ><span>Illustrative schematic elevation</span>
               </figcaption>
+            </figure> -->
+            <div class="memorial-slider swiper">
+    <div class="swiper-wrapper">
+
+        <!-- Slide 1: Image -->
+        <div class="swiper-slide">
+            <figure class="drawing">
+                <div class="memorial-architecture-image">
+                    <img
+                        src="assets/imgs/Ratan Tata Statue Tata Motors Pimpri Chinchwad Plant.jpeg"
+                        alt="Ratan Tata Memorial Water Curtain Hydraulic Diagram"
+                        loading="lazy"
+                    >
+                </div>
+                <figcaption>
+                    <span>Ratan Tata Statue Tata Motors</span>
+                    <span>Pimpri Chinchwad Plant</span>
+                </figcaption>
             </figure>
+        </div>
+
+        <!-- Slide 2: Video -->
+        <div class="swiper-slide">
+            <figure class="drawing">
+                <div class="memorial-architecture-image">
+                    <video controls playsinline preload="metadata"
+                        poster="assets/video-poster.jpg">
+                        <source src="assets/imgs/Ratan Tata Statue inaugurated at Tata Motors Plant Pimpri Chinchwad.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <figcaption>
+                    <span>Ratan Tata Statue inaugurated</span>
+                    <span>At Tata Motors Plant Pimpri Chinchwad</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Slide 3: Image -->
+        <div class="swiper-slide">
+            <figure class="drawing">
+                <div class="memorial-architecture-image">
+                    <img
+                        src="assets/imgs/Tata Motors Announcement.jpeg"
+                        alt="Ratan Tata Memorial Water Curtain"
+                        loading="lazy"
+                    >
+                </div>
+                <figcaption>
+                    <span>Tata Motors Announcement</span>
+                    <span>Project visualization</span>
+                </figcaption>
+            </figure>
+        </div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="memorial-slider-prev">
+        <i class="bi bi-arrow-left"></i>
+    </div>
+
+    <div class="memorial-slider-next">
+        <i class="bi bi-arrow-right"></i>
+    </div>
+
+</div>
+
+<script>
+    const memorialSwiper = new Swiper(".memorial-slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        speed: 600,
+
+        navigation: {
+            nextEl: ".memorial-slider-next",
+            prevEl: ".memorial-slider-prev",
+        },
+
+        on: {
+            slideChange: function () {
+                document.querySelectorAll(
+                    ".memorial-slider video"
+                ).forEach(video => {
+                    video.pause();
+                });
+            }
+        }
+    });
+</script>
             <div class="commission-body">
               <span class="commission-index">01 / 03</span>
                 <div class="commission-logo">
@@ -292,7 +438,7 @@
               <dl class="credit-line">
                 <div>
                   <dt>Location</dt>
-                  <dd>Navi Mumbai ×2 · Hyderabad ×2</dd>
+                  <dd>Navi Mumbai · Hyderabad</dd>
                 </div>
                 <div>
                   <dt>Architect</dt>
